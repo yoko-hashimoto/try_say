@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hitokoto</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav>
+          <ul class="top_menu clearfix">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/says">Hitokoto一覧</a></li>
+            <li><a href="/says/new">新規投稿</a></li>
+          </ul>
+        </nav>
+      </header>
+      <footer class="footer">
+        <p>Copyright © ️︎2018 Yoko Hashimoto</p>
+      </footer>
+    </div>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<div class="container">
+
+<h4><%= notice %></h4>
+
+<%= form_with(model: @say, local: true, url: choose_new_or_edit) do |form| %>
+  <% if @say.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @say.errors.count %>件のエラーがあります。</h2>
+      
+      <ul>
+      <% @say.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+　　  
+  <%= form.text_area :content, placeholder: "Hitokoto言ってみる" %>
+  
+  <div class="button_wrapper">
+    <%=link_to '戻る', says_path, class: 'button' %>
+    <%= form.submit "投稿", class: 'button' %>
+  </div>
+
+<% end %>
+
+</div>

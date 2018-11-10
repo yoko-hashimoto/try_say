@@ -1,0 +1,20 @@
+<div class="container">
+ 
+  <div class="confirm_wrapper"></div>
+    <h2>この内容で投稿しますか？</h2>
+    <div class="confirm_form">
+      <%= form_with(model: @say, url: says_path, local: true) do |form| %>
+        <%= form.hidden_field :content %>
+        <p><%= @say.content %></p>
+        <div class="post_back_buttons_wrapper">
+          <%= form.submit "投稿", class: 'post_back_buttons' %>
+      <% end %>
+        
+      <%= form_with(model: @say, url: new_say_path, local: true, method: 'get') do |form| %>
+        <%= form.hidden_field :content %>
+        <%=form.submit "戻る", name: 'back', class: 'post_back_buttons' %>
+      <% end %>
+        </div>
+    </div>
+  </div>
+</div>

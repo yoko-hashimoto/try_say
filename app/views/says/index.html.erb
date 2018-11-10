@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Hitokoto一覧</h1>
+    
+  <h2><%= notice %></h2>
+    
+  <div class="wrapper_content">
+    <table class="content">
+
+      <colgroup>
+        <col>
+      </colgroup>
+      
+    <% @says.each do |say| %>
+      <tr>
+        <td colspan="2" class="hitokoto_content"><%= say.content %></td>
+      </tr>
+      <tr>
+        <td class="date"><%= say.updated_at.strftime("%Y-%m-%d %H:%M ") %></td>
+      </tr>
+      
+      <tr class="btn">
+        <td class="delete_edite_buttons">
+        <%= link_to "削除", say_path(say.id), class: 'delete_edit_button', method: :delete, data: {confirm: "本当に削除していいですか？"} %>
+        <%= link_to "編集", edit_say_path(say.id), class: 'delete_edit_button', data: {confirm: "本当に編集していいですか？" } %>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+    
+     <br>
+     <%= button_to 'top', says_path, class: 'top_button', :method => :get %>
+ 
+</div>

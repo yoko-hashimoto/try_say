@@ -1,0 +1,308 @@
+// Place all the styles related to the says controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  font-size: 62.5%;
+  /* 高さをブラウザの表示領域と同じにする */
+  min-height: 100%;
+   /* footerをウィンドウ下部に固定する為にrelativeを指定 */
+  position: relative;
+  background-color: #f5f8fa;
+}
+
+body {
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.5rem;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #2E9AFE;
+  padding: 20;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  /* footer部分と重ならないよう余白を取る */
+  padding-bottom: 70px;
+  text-align: center;
+  margin: auto;
+}
+
+.header {
+  background-color: #91D2FA;
+  width: 100%;
+  height: 70px;
+  font-size: 2rem;
+  z-index: 1;
+  /* headerの位置を画面上部に固定する */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.top_menu li {
+  float: left;
+  width: auto
+}
+
+.top_menu li a {
+  color: #fff;
+/* <a>タグの下線を外す */
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  line-height: 1.8;
+}
+
+/* <a>タグの要素をマウスオーバーした際に */
+.top_menu li a:hover {
+  /* アンダーラインを表示する */
+  text-decoration: underline;
+}
+
+ul {
+  /* 余白を削除 */
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  /* リスト先頭の黒丸を削除 */
+  list-style: none;
+}
+
+.wrapper_content {
+  margin: 50px auto auto auto;
+  width: 500px;
+}
+
+col {
+   width: 100%;
+}
+
+.content {
+  /* table(Hitokoto一覧)を左右中央寄せにする */
+  margin: auto;
+  /* ボタンの下に線を表示させる為の処理 */
+  border-collapse: collapse;
+  background-color: #fff;
+  table-layout: fixed;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+tr {
+  text-align: left;
+}
+
+.hitokoto_content {
+  font-size: 2rem;
+  padding: 20px 8px 20px 20px;
+  line-height: 1.5;
+}
+
+.date {
+  font-size: 1.2rem;
+  padding-left:20px;
+}
+
+.delete_edite_buttons {
+  text-align: right;
+  padding: 20px;
+}
+
+.delete_edit_button {
+  display: inline-block;
+  width: 60px;
+  height:35px;
+  line-height: 35px;
+  color: #FFF;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  background-color: #A7DBFB; /*ボタン色*/
+  border-radius: 100px; /*角丸*/
+  border-color: #1da1f2;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+     transition: all 0.5s;
+  margin-left: 10px;
+}
+
+.delete_edit_button:hover {
+  background-color: #81BEF7;
+  border-color: #81BEF7;
+}
+
+.btn {
+  /* ボタンの下に線を表示させる */
+  border-bottom: 1px solid #e6ecf0;
+}
+
+td {
+  padding:3px;
+}
+
+.top_button {
+  color: #66757f;
+    width: 80px;
+    height: 35px;
+    line-height: 30px;
+    font-size: 1.5rem;
+    border-radius: 100px;
+    margin: 20px auto 30px auto;
+}
+
+.top_button:hover {
+  color: #91D2FA;
+  border-color: #91D2FA;
+}
+
+.footer {
+  width: 100%;
+  height: 70px;
+  /* footerをウィンドウ下部に固定する */
+  position: absolute;
+  bottom: 0px;
+  background-color: #91D2FA;
+  /* ブロックを要素である<p>をテーブルセルのように扱う */
+  display: table;
+}
+
+.footer p {
+  font-size: 1.5rem;
+  color: #fff;
+  /* 左右を中央揃にする */
+  text-align: center;
+  /* 上下を中央揃にする */
+  vertical-align: middle;
+  /* ブロックを要素である<p>をテーブルセルのように扱う(vertical-alignを適用する為) */
+  display: table-cell;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.post_back_buttons {
+  display: inline-block;
+  width: 80px;
+  height:35px;
+  line-height: 35px;
+  color: #FFF;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: #A7DBFB; /*ボタン色*/
+  border-radius: 100px; /*角丸*/
+  padding: 0;
+  border: none;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-right: 60px;
+  float: right;
+}
+
+.post_back_buttons:hover {
+  background-color: #81BEF7;
+  border-color: #81BEF7;
+}
+
+.post_back_buttons_wrapper {
+  text-align: center;
+  margin: 20px auto 0 auto;
+}
+
+.button {
+  display: inline-block;
+  width: 80px;
+  height:35px;
+  line-height: 35px;
+  color: #FFF;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: #A7DBFB; /*ボタン色*/
+  border-radius: 100px; /*角丸*/
+  padding: 0;
+  border: none;
+  text-align: center;
+  margin: 20px auto auto 35px;
+}
+
+.button:hover {
+  background-color: #81BEF7;
+  border-color: #81BEF7;
+}
+
+.button_wrapper {
+  margin: 20px auto 0 auto;
+}
+
+.confirm_wrapper {
+  margin-top: 40px;
+}
+
+textarea {
+    margin: 0px;
+    padding: 15px 5px 15px 15px;
+    // padding: 10px;
+    height: 161px;
+    width: 328px;
+    line-height: 1.5;
+    border-color: #e6ecf0;
+    resize: none;
+    font-size: 2rem;
+}
+
+.confirm_form {
+  text-align: center;
+  display: inline-block;
+}
+
+.confirm_form p {
+  height: 161px;
+  width: 328px;
+  font-size: 2rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  text-align: left;
+  border: solid 1px #a7dbfb;
+  background-color: #fff;
+  padding: 15px 5px 15px 15px;
+  overflow: scroll;
+}
+
+.main_continer {
+  background-image: image-url("sunrise.jpg");
+  background-size: cover;
+  height:0;
+  /* 表示画像の高さ ÷　表示画像の幅 × 100
+  (ディスプレイのサイズに合わせて背景画像を100%で表示させる)*/
+  padding-bottom: 66.59%;
+  margin: 0;
+  text-align: left;
+}
+
+.top_title {
+  font-size: 6rem;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  color: #fff;
+  padding-left: 80px;
+  padding-top: 80px;
+  margin: 0;
+}
+
+p {
+  font-size: 2rem;
+  padding-left: 80px;
+  padding-top: 10px;
+}
